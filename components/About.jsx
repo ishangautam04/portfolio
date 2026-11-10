@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { Mail, Github } from "lucide-react";
 import { aboutData } from "@/data/about";
 import SectionTitle from "./SectionTitle";
 import Card from "./Card";
@@ -27,7 +27,7 @@ export default function About() {
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-accent-400 rounded-2xl transform rotate-6" />
-              <div className="relative bg-gray-200 dark:bg-gray-700 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative w-full h-full bg-gray-200 dark:bg-gray-700 rounded-2xl overflow-hidden shadow-2xl">
                 {/* Placeholder - replace with actual image */}
                 <div className="w-full h-full flex items-center justify-center text-gray-400">
                   <span className="text-6xl">👤</span>
@@ -60,10 +60,6 @@ export default function About() {
             {/* Contact Info */}
             <Card className="space-y-4">
               <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-                <MapPin className="w-5 h-5 text-primary-600" />
-                <span>{aboutData.location}</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
                 <Mail className="w-5 h-5 text-primary-600" />
                 <a
                   href={`mailto:${aboutData.email}`}
@@ -73,8 +69,15 @@ export default function About() {
                 </a>
               </div>
               <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-                <Phone className="w-5 h-5 text-primary-600" />
-                <span>{aboutData.phone}</span>
+                <Github className="w-5 h-5 text-primary-600" />
+                <a
+                  href={aboutData.social.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary-600 transition-colors"
+                >
+                  github.com/ishangautam04
+                </a>
               </div>
             </Card>
 
@@ -82,26 +85,26 @@ export default function About() {
             <div className="grid grid-cols-3 gap-4 mt-8">
               <Card className="text-center">
                 <div className="text-3xl font-bold text-primary-600 mb-2">
-                  5+
+                  3
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Years Experience
+                  Projects Built
                 </div>
               </Card>
               <Card className="text-center">
                 <div className="text-3xl font-bold text-accent-600 mb-2">
-                  50+
+                  2
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Projects Done
+                  AI-Powered Apps
                 </div>
               </Card>
               <Card className="text-center">
                 <div className="text-3xl font-bold text-pink-600 mb-2">
-                  30+
+                  2
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Happy Clients
+                  Backend Frameworks
                 </div>
               </Card>
             </div>

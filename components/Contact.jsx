@@ -69,11 +69,11 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
           >
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Let's talk about everything!
+              Let&apos;s talk about everything!
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
               Feel free to reach out if you want to collaborate on a project,
-              have a question, or just want to connect. I'm always open to
+              have a question, or just want to connect. I&apos;m always open to
               discussing new opportunities and ideas.
             </p>
 
@@ -104,11 +104,16 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">
-                      Location
+                      GitHub
                     </div>
-                    <div className="text-gray-900 dark:text-white">
-                      {aboutData.location}
-                    </div>
+                    <a
+                      href={aboutData.social.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-900 dark:text-white hover:text-primary-600 transition-colors"
+                    >
+                      github.com/ishangautam04
+                    </a>
                   </div>
                 </div>
               </Card>
@@ -203,7 +208,7 @@ export default function Contact() {
                 {/* Status Message */}
                 {status === "success" && (
                   <div className="p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg">
-                    Message sent successfully! I'll get back to you soon.
+                    Message sent successfully! I&apos;ll get back to you soon.
                   </div>
                 )}
                 {status === "error" && (

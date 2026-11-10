@@ -125,6 +125,7 @@ export default function Projects() {
                       }`}
                     >
                       <Github className="w-4 h-4" />
+                      {!project.liveUrl && "View on GitHub"}
                     </a>
                   </div>
                 </div>

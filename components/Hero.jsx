@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
+import { ArrowDown, Github, Mail, FolderGit2 } from "lucide-react";
 import { aboutData } from "@/data/about";
 import Button from "./Button";
 
@@ -31,7 +31,7 @@ export default function Hero() {
             className="mb-6"
           >
             <span className="inline-block text-primary-600 dark:text-primary-400 text-lg font-medium mb-2">
-              👋 Hello, I'm
+              👋 Hello, I&apos;m
             </span>
           </motion.div>
 
@@ -82,9 +82,16 @@ export default function Hero() {
               <Mail className="w-5 h-5 mr-2 inline" />
               Get In Touch
             </Button>
-            <Button variant="outline">
-              <Download className="w-5 h-5 mr-2 inline" />
-              Download Resume
+            <Button
+              variant="outline"
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              <FolderGit2 className="w-5 h-5 mr-2 inline" />
+              View Projects
             </Button>
           </motion.div>
 
@@ -102,14 +109,6 @@ export default function Hero() {
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
             >
               <Github className="w-6 h-6" />
-            </a>
-            <a
-              href={aboutData.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
-            >
-              <Linkedin className="w-6 h-6" />
             </a>
             <a
               href={`mailto:${aboutData.email}`}

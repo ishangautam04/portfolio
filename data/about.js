@@ -1,16 +1,9 @@
 export const aboutData = {
-  name: "Your Name",
-  tagline: "Full Stack Developer | Creative Problem Solver | Tech Enthusiast",
-  bio: "I'm a passionate developer with a keen eye for creating beautiful, functional web applications. With expertise in modern web technologies, I transform ideas into elegant digital solutions. I love building products that make a difference and constantly learning new technologies to stay at the forefront of web development.",
-  email: "your.email@example.com",
-  phone: "+1 (123) 456-7890",
-  location: "Your City, Country",
-  resumeUrl: "/resume.pdf",
+  name: "Ishan Gautam",
+  tagline: "Full Stack Developer | AI-Powered Web Apps",
+  bio: "I'm a full stack developer who builds web applications with AI at their core. My projects include a Gemini-powered task manager, a RAG-based tool that helps engineers understand unfamiliar codebases, and a finance analyzer backed by a FastAPI machine-learning service. I work across React, Next.js, Node.js and Python.",
+  email: "ishan.gautam222@gmail.com",
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    twitter: "https://twitter.com/yourusername",
-    portfolio: "https://yourportfolio.com"
+    github: "https://github.com/ishangautam04",
   },
-  image: "/images/profile.jpg" // Add your profile photo here
 };

@@ -5,9 +5,9 @@ import ThemeProvider from "@/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio | Your Name",
-  description: "Full Stack Developer Portfolio - Showcasing my projects and skills",
-  keywords: ["portfolio", "web developer", "full stack", "react", "next.js"],
+  title: "Ishan Gautam | Portfolio",
+  description: "Full stack developer building AI-powered web apps with React, Next.js, Node.js and Python.",
+  keywords: ["Ishan Gautam", "portfolio", "full stack developer", "react", "next.js", "node.js", "fastapi"],
 };
 
 export default function RootLayout({ children }) {

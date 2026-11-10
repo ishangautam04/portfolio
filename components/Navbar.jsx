@@ -10,7 +10,6 @@ const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -49,7 +48,7 @@ export default function Navbar() {
               href="/"
               className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent"
             >
-              Portfolio
+              Ishan Gautam
             </Link>
           </motion.div>
 
