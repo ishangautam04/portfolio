@@ -1,78 +1,73 @@
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform with shopping cart, payment integration, and order management. Built with modern technologies for optimal performance.",
-    longDescription: "This comprehensive e-commerce solution includes user authentication, product catalog, shopping cart functionality, secure payment processing with Stripe, order tracking, and an admin dashboard for inventory management.",
-    image: "/images/projects/ecommerce.jpg",
-    technologies: ["Next.js", "React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-    liveUrl: "https://demo-ecommerce.example.com",
-    githubUrl: "https://github.com/yourusername/ecommerce-platform",
+    title: "AI Task Manager & Notes",
+    description:
+      "An AI-powered productivity app that turns natural language into structured tasks, with voice input, smart note analysis and multiple task views.",
+    longDescription:
+      "A MERN-stack task and notes application powered by Google Gemini. It parses sentences like \"Call dentist tomorrow at 2pm urgently\" into categorized, prioritized tasks, summarizes notes, analyzes sentiment, supports voice-to-text via the Web Speech API, and offers Dashboard, List, Calendar and Kanban views with JWT authentication and a demo mode.",
+    image: null,
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Gemini API",
+      "Tailwind CSS",
+      "JWT",
+    ],
+    liveUrl: null, // add the deployed URL once confirmed
+    githubUrl: "https://github.com/ishangautam04/ai-task-manager",
     featured: true,
-    category: "Full Stack"
+    category: "Full Stack",
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A beautiful and intuitive task management application with drag-and-drop functionality, real-time updates, and team collaboration features.",
-    longDescription: "Streamline your workflow with this powerful task manager featuring Kanban boards, calendar views, task assignments, priority levels, and real-time collaboration with team members.",
-    image: "/images/projects/task-manager.jpg",
-    technologies: ["React", "Firebase", "Framer Motion", "Tailwind CSS"],
-    liveUrl: "https://task-manager.example.com",
-    githubUrl: "https://github.com/yourusername/task-manager",
+    title: "Codebase Onboarding SaaS",
+    description:
+      "An AI platform that helps engineers understand large codebases quickly through RAG-based Q&A, semantic search and architecture analysis.",
+    longDescription:
+      "Connect a GitHub repository and ask questions about it in natural language. The platform clones and indexes the repo, chunks and embeds the code into PostgreSQL with pgvector, and answers with cited sources using LangChain and Groq-hosted LLMs. Includes GitHub OAuth, conversations, background analysis with status tracking, and architecture and framework detection. Diagram generation and semantic code search are in progress.",
+    image: null,
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "FastAPI",
+      "LangChain",
+      "Groq",
+      "PostgreSQL",
+      "pgvector",
+      "Tailwind CSS",
+    ],
+    liveUrl: null,
+    githubUrl: "https://github.com/ishangautam04/codebase_review",
     featured: true,
-    category: "Frontend"
+    category: "AI / ML",
   },
   {
     id: 3,
-    title: "Weather Forecast App",
-    description: "Real-time weather forecasting application with beautiful UI, location-based weather data, and 7-day forecasts.",
-    longDescription: "Get accurate weather information with this sleek application that provides current conditions, hourly forecasts, 7-day predictions, and interactive weather maps using OpenWeather API.",
-    image: "/images/projects/weather.jpg",
-    technologies: ["Next.js", "OpenWeather API", "Chart.js", "Tailwind CSS"],
-    liveUrl: "https://weather-app.example.com",
-    githubUrl: "https://github.com/yourusername/weather-app",
-    featured: false,
-    category: "Frontend"
-  },
-  {
-    id: 4,
-    title: "Social Media Dashboard",
-    description: "Analytics dashboard for social media metrics with beautiful data visualizations and real-time insights.",
-    longDescription: "Track and analyze your social media performance across multiple platforms with interactive charts, engagement metrics, follower growth tracking, and customizable reports.",
-    image: "/images/projects/dashboard.jpg",
-    technologies: ["React", "D3.js", "Express", "PostgreSQL", "Tailwind CSS"],
-    liveUrl: "https://dashboard.example.com",
-    githubUrl: "https://github.com/yourusername/social-dashboard",
+    title: "Personal Finance Analyzer",
+    description:
+      "A finance analysis app that tracks income and expenses, calculates savings rate and risk, and is designed to add ML-based spending predictions.",
+    longDescription:
+      "A MERN application with a separate FastAPI machine-learning backend. Users register, enter income and expenses by category, and get real-time savings-rate and risk analysis, rule-based budget recommendations and a charted dashboard. The ML service uses scikit-learn models trained on an Indian personal finance dataset for spending category, savings rate and risk prediction; trained models are not yet included in the repo.",
+    image: null,
+    technologies: [
+      "React",
+      "Material-UI",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "FastAPI",
+      "scikit-learn",
+    ],
+    liveUrl: null,
+    githubUrl: "https://github.com/ishangautam04/finacne_management",
     featured: true,
-    category: "Full Stack"
+    category: "Full Stack",
   },
-  {
-    id: 5,
-    title: "Blog Platform",
-    description: "Modern blogging platform with markdown support, syntax highlighting, and SEO optimization.",
-    longDescription: "A feature-rich blogging platform with markdown editor, code syntax highlighting, tag-based organization, search functionality, and built-in SEO optimization for better discoverability.",
-    image: "/images/projects/blog.jpg",
-    technologies: ["Next.js", "MDX", "Prisma", "PostgreSQL", "Tailwind CSS"],
-    liveUrl: "https://blog-platform.example.com",
-    githubUrl: "https://github.com/yourusername/blog-platform",
-    featured: false,
-    category: "Full Stack"
-  },
-  {
-    id: 6,
-    title: "Portfolio Generator",
-    description: "Generate beautiful portfolio websites with customizable templates and themes in minutes.",
-    longDescription: "An innovative tool that helps developers create stunning portfolio websites quickly. Choose from multiple templates, customize colors and layouts, and deploy instantly with one click.",
-    image: "/images/projects/portfolio-gen.jpg",
-    technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
-    liveUrl: "https://portfolio-generator.example.com",
-    githubUrl: "https://github.com/yourusername/portfolio-generator",
-    featured: false,
-    category: "Frontend"
-  }
 ];
 
-export const featuredProjects = projects.filter(project => project.featured);
+export const featuredProjects = projects.filter((project) => project.featured);
 
-export const projectCategories = [...new Set(projects.map(p => p.category))];
+export const projectCategories = [...new Set(projects.map((p) => p.category))];
