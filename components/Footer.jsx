@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Heart, Code2 } from "lucide-react";
 import { aboutData } from "@/data/about";
 
 const socialIcons = {
   github: Github,
   linkedin: Linkedin,
   twitter: Twitter,
+  leetcode: Code2,
 };
 
 export default function Footer() {

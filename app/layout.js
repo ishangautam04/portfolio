@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Ishan Gautam | Portfolio",
-  description: "Full stack developer building AI-powered web apps with React, Next.js, Node.js and Python.",
+  description: "Software Development Engineer at Dell Technologies. Full stack and AI projects with React, Next.js, Node.js, FastAPI and LangChain.",
   keywords: ["Ishan Gautam", "portfolio", "full stack developer", "react", "next.js", "node.js", "fastapi"],
 };
 

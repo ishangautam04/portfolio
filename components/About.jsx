@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Mail, Github } from "lucide-react";
+import { Mail, Github, Linkedin, MapPin } from "lucide-react";
 import { aboutData } from "@/data/about";
 import SectionTitle from "./SectionTitle";
 import Card from "./Card";
@@ -60,6 +60,10 @@ export default function About() {
             {/* Contact Info */}
             <Card className="space-y-4">
               <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                <MapPin className="w-5 h-5 text-primary-600" />
+                <span>{aboutData.location}</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
                 <Mail className="w-5 h-5 text-primary-600" />
                 <a
                   href={`mailto:${aboutData.email}`}
@@ -79,32 +83,43 @@ export default function About() {
                   github.com/ishangautam04
                 </a>
               </div>
+              <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                <Linkedin className="w-5 h-5 text-primary-600" />
+                <a
+                  href={aboutData.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary-600 transition-colors"
+                >
+                  linkedin.com/in/ishangautam04
+                </a>
+              </div>
             </Card>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 mt-8">
               <Card className="text-center">
                 <div className="text-3xl font-bold text-primary-600 mb-2">
-                  3
+                  4
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Projects Built
+                  Industry Roles
                 </div>
               </Card>
               <Card className="text-center">
                 <div className="text-3xl font-bold text-accent-600 mb-2">
-                  2
+                  3
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  AI-Powered Apps
+                  Featured Projects
                 </div>
               </Card>
               <Card className="text-center">
                 <div className="text-3xl font-bold text-pink-600 mb-2">
-                  2
+                  60%+
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Backend Frameworks
+                  Build Time Cut at Dell
                 </div>
               </Card>
             </div>

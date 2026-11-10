@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Mail, FolderGit2 } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, FolderGit2, Download, Code2 } from "lucide-react";
 import { aboutData } from "@/data/about";
 import Button from "./Button";
 
@@ -93,6 +93,15 @@ export default function Hero() {
               <FolderGit2 className="w-5 h-5 mr-2 inline" />
               View Projects
             </Button>
+            {aboutData.resumeUrl && (
+              <Button
+                variant="outline"
+                onClick={() => window.open(aboutData.resumeUrl, "_blank")}
+              >
+                <Download className="w-5 h-5 mr-2 inline" />
+                Resume
+              </Button>
+            )}
           </motion.div>
 
           {/* Social Links */}
@@ -109,6 +118,24 @@ export default function Hero() {
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
             >
               <Github className="w-6 h-6" />
+            </a>
+            <a
+              href={aboutData.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a
+              href={aboutData.social.leetcode}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LeetCode"
+              className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
+            >
+              <Code2 className="w-6 h-6" />
             </a>
             <a
               href={`mailto:${aboutData.email}`}
